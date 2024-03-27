@@ -20,5 +20,6 @@ import crm.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', crm.views.first_page),
+    path('thanks', crm.views.thanks_page,name='thanks'),
     
 ]
