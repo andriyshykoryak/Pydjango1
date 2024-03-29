@@ -8,13 +8,9 @@
 <body>
 
     <form action="{% url 'thanks' %}">
-        <label for="">Name</label>
-        <input  name="name">
-        <label for="">Email</label>
-        <input  name="email" id="">
-        <label for="">Phone</label>
-        <input name="phone">
-        <button type="submit">Sent</button>
+       
+        {{ form }}
+        <button type="submit">sent</button>
     </form>
 
 
