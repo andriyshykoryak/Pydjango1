@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-    <form action="{% url 'thanks' %}">
-       
-        {{ form }}
-        <button type="submit">sent</button>
-    </form>
+{% extends 'base.html' %}
 
-
-
-{% if object_list %}
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Date</th>
-            <th>name</th>
-            <th>Phone</th>
-        </tr>
-        <tr>
-            {% for obj in object_list %}
-            <th>{{obj.id}}</th>
-            <th>{{obj.order_dt}}</th>
-            <th>{{obj.order_name}}</th>
-            <th>{{obj.order_phone}}</th>
-        </tr>
-        {% endfor %}
-    </table>
-    {% else %}
-    <h2>No data</h2>
-    {% endif %}
-</body>
-</html>
+{% block content %}
+<h2>Data from index</h2>
+{% endblock %}
